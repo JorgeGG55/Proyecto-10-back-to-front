@@ -1,0 +1,177 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0f1a25;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #18bc9c;
+  text-decoration: inherit;
+  font-weight: bold;
+}
+a:hover {
+  color: #18bc9c;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav,
+ul {
+  display: flex;
+  list-style: none;
+}
+
+li {
+  margin-right: 20px;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+#app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#contenido-eventos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  max-width: 400px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.card h2 {
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.card p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.confirm-button,
+.cancel-button,
+.attendee-list,
+#login-button,
+#register-button,
+#create-event-button {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.cancel-button {
+  color: white;
+  background-color: red;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+
+.myEventsMsg {
+  margin-bottom: 70%;
+}
+
+.confirm-button {
+  color: white;
+  background-color: #18bc9c;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+
+.attendee-list {
+  color: white;
+  background-color: #1a2937;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+
+#login-form,
+#register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#login-button,
+#register-button,
+#create-event-button {
+  color: white;
+  background-color: #18bc9c;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+
+#create-event-form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 100%;
+  color: black;
+  background-color: white;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="date"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.eventButtons {
+  display: flex;
+  justify-content: space-between;
+}
