@@ -1,4 +1,4 @@
-const Register = () => {
+const Register = (changeToLoginForm) => {
   const handleRegister = async (event) => {
     event.preventDefault();
     const name = document.getElementById("name").value;
@@ -18,7 +18,7 @@ const Register = () => {
 
       if (response.ok) {
         alert(data.message);
-        window.location.reload();
+        changeToLoginForm();
       } else {
         alert(data.message);
       }

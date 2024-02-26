@@ -108,11 +108,12 @@ document.addEventListener("click", async function (event) {
       const attendees = await response.json();
       if (!response.ok) {
         alert(attendees.message);
+      } else {
+        if (attendees.length > 0) {
+          const numAttendees = attendees.length;
+          alert(`Número de asistentes: ${numAttendees}`);
+        }
       }
-      const attendeeList = attendees
-        .map((attendee) => `${attendee.name} - ${attendee.email}`)
-        .join("\n");
-      alert(attendeeList);
     } catch (error) {
       console.error("Error:", error.message);
     }

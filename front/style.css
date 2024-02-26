@@ -52,6 +52,10 @@ h1 {
   line-height: 1.1;
 }
 
+#title {
+  cursor: pointer;
+}
+
 #app {
   height: 100vh;
   display: flex;
@@ -62,16 +66,26 @@ h1 {
   margin-right: 10%;
 }
 
+#contenido-principal {
+  display: flex;
+  align-items: center;
+}
+
 #contenido-eventos {
   display: flex;
   flex-wrap: wrap;
   gap: 100px;
 }
 
+#contenido-perfil {
+  margin-bottom: 15%;
+}
+
 .card {
   background-color: #fff;
   border-radius: 5px;
   max-width: 400px;
+  width: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   padding: 20px;
@@ -174,4 +188,111 @@ input[type="date"] {
 .eventButtons {
   display: flex;
   justify-content: space-between;
+}
+
+img {
+  height: 500px;
+}
+
+#mobile-menu-toggle,
+.closebtn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #contenido-principal {
+    flex-direction: column;
+  }
+
+  #contenido-eventos {
+    gap: 20px;
+  }
+
+  h1 {
+    font-size: 2.7rem;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: #0f1a25;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  nav.show {
+    display: flex;
+  }
+  img {
+    height: 300px;
+  }
+
+  nav,
+  ul {
+    flex-direction: column;
+    margin-top: 10%;
+  }
+
+  #mobile-menu-toggle {
+    display: block;
+    font-size: 2.5rem;
+    cursor: pointer;
+  }
+
+  #navbar ul {
+    padding: 0;
+  }
+
+  #navbar li {
+    margin: 10px 0;
+  }
+
+  #navbar a {
+    color: rgba(255, 255, 255, 0.87);
+  }
+
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #0f1a25;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+
+  .sidenav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidenav a:hover {
+    color: #18bc9c;
+  }
+
+  .closebtn {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    font-size: 36px !important;
+  }
+
+  .eventButtons {
+    flex-direction: column;
+  }
+
+  .confirm-button {
+    margin-bottom: 20px;
+  }
 }

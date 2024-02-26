@@ -14,10 +14,10 @@ const obtenerUsuario = async () => {
 
       inputsHTML += `
                 <div>
-                    <p>${userData.name}</p>
+                    <p>Nombre: ${userData.name}</p>
                 </div>
                 <div>
-                    <p>${userData.email}</p>
+                    <p>Email: ${userData.email}</p>
                 </div>
             `;
     } else {

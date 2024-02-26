@@ -19,34 +19,41 @@ document.addEventListener("DOMContentLoaded", function () {
   const renderLoginForm = () => {
     document.getElementById("contenido-principal").innerHTML = Login();
     document.getElementById("contenido-eventos").innerHTML = "";
+    document.getElementById("contenido-perfil").innerHTML = "";
   };
 
   const renderRegisterForm = () => {
-    document.getElementById("contenido-principal").innerHTML = Register();
+    document.getElementById("contenido-principal").innerHTML =
+      Register(renderLoginForm);
     document.getElementById("contenido-eventos").innerHTML = "";
+    document.getElementById("contenido-perfil").innerHTML = "";
   };
 
   const renderCreateEventForm = () => {
     document.getElementById("contenido-principal").innerHTML = CreateEvent();
     document.getElementById("contenido-eventos").innerHTML = "";
+    document.getElementById("contenido-perfil").innerHTML = "";
   };
 
   const renderEvents = async () => {
     const eventosHTML = await obtenerEventos();
     document.getElementById("contenido-eventos").innerHTML = eventosHTML;
     document.getElementById("contenido-principal").innerHTML = "";
+    document.getElementById("contenido-perfil").innerHTML = "";
   };
 
   const renderUserEvents = async () => {
     const userEventosHTML = await obtenerEventosUsuario();
     document.getElementById("contenido-eventos").innerHTML = userEventosHTML;
     document.getElementById("contenido-principal").innerHTML = "";
+    document.getElementById("contenido-perfil").innerHTML = "";
   };
 
   const renderUser = async () => {
     const userHTML = await obtenerUsuario();
     document.getElementById("contenido-eventos").innerHTML = "";
-    document.getElementById("contenido-principal").innerHTML = userHTML;
+    document.getElementById("contenido-principal").innerHTML = "";
+    document.getElementById("contenido-perfil").innerHTML = userHTML;
   };
 
   const logoutFunc = () => {

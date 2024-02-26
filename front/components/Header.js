@@ -25,12 +25,28 @@ const Header = () => {
 
   const headerContent = `
         <header>
-            <h1>Event Click</h1>
-            <nav>
-                ${navContent}
-            </nav>
+            <span id="mobile-menu-toggle">&#9776;</span>
+            <h1 id="title">Event Click</h1>
+            <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" id="closebtn">&times;</a>
+              ${navContent}
+            </div>
         </header>
     `;
+
+  document.addEventListener("click", function (event) {
+    const isMobile = window.innerWidth <= 768;
+
+    if (event.target.matches("#title")) {
+      window.location.reload();
+    } else if (event.target.matches("#mobile-menu-toggle")) {
+      document.getElementById("mySidenav").style.width = "100%";
+    } else if (event.target.matches("#closebtn")) {
+      document.getElementById("mySidenav").style.width = "0";
+    } else if (event.target.matches("#nav-ul a") && isMobile) {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  });
 
   return headerContent;
 };
